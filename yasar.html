@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yasar Arafath's Portfolio - Web Developer and BCA Student">
+    <meta name="keywords" content="Yasar Arafath, BCA, Web Developer, HTML, CSS, JavaScript, Portfolio">
+    <meta name="author" content="Yasar Arafath">
+    <meta property="og:title" content="Yasar Arafath's Portfolio">
+    <meta property="og:description" content="Explore my projects, skills, and get in touch with me.">
+    <meta property="og:image" content="link_to_your_image.jpg">
+    <meta property="og:url" content="http://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Yasar Arafath's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f8ff; /* Updated background color */
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header, footer {
+            background-color: #4682b4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a, footer a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header a:hover, footer a:hover {
+            color: #add8e6;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .intro img {
+            border-radius: 50%;
+            border: 5px solid #4682b4;
+            width: 150px;
+            height: 150px;
+        }
+
+        .intro h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #4682b4;
+        }
+
+        .intro h2 {
+            margin: 20px 0;
+            color: #333;
+            font-weight: normal;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 1.5em;
+        }
+
+        .social-icons a:hover {
+            color: #4682b4;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .button-container button {
+            background-color: #4682b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background-color: #4169e1;
+            color: #fff;
+        }
+
+        .contact-page {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info, .contact-form {
+            width: 45%;
+        }
+
+        h3 {
+            color: #4682b4;
+        }
+
+        a {
+            color: #4682b4;
+            text-decoration: none;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 2px solid #4682b4;
+            background-color: #fff;
+            color: #333;
+        }
+
+        button[type="submit"] {
+            background-color: #4682b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #4169e1;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .about-content, .resume-content {
+            padding: 50px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content h1, .resume-content h1 {
+            color: #4682b4;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .about-content p, .resume-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px auto;
+        }
+
+        .resume img {
+            border-radius: 50%;
+            border: 5px solid #4682b4;
+            width: 150px;
+            height: 150px;
+            position:relative
+
+        }
+
+
+        .resume-section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .resume-section h2 {
+            color: #4682b4;
+            font-size: 1.8em;
+            border-bottom: 2px solid #4682b4;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .resume-section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .skill-box {
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #e6e6fa;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .skill-title {
+            color: #4682b4;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .skill-level {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .skill-percentage {
+            height: 100%;
+            background-color: #4682b4;
+            border-radius: 10px;
+        }
+
+        .resume-personal-info, .resume-hobbies, .resume-passions, .resume-experience, .resume-education {
+            background-color: #e6e6fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .resume-personal-info h2, .resume-hobbies h2, .resume-passions h2, .resume-experience h2, .resume-education h2 {
+            color: #4682b4;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .resume-personal-info ul, .resume-hobbies ul, .resume-passions ul, .resume-experience ul, .resume-education ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 1.2em;
+        }
+
+        .resume-personal-info li, .resume-hobbies li, .resume-passions li, .resume-experience li, .resume-education li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#intro">Home</a>
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="intro" id="intro">
+        <img src="yasar.jpg" alt="Yasar Arafath's Profile Picture">
+        <h1>Hello, it's Me</h1>
+        <h2>Yasar Arafath</h2>
+        <p>I'm currently pursuing BCA at MIET College. Skilled in various technologies and passionate about coding.</p>
+
+        <div class="button-container">
+            <button onclick="window.location.href='#resume'">View Resume</button>
+            <button onclick="window.location.href='Resume.pdf'">Download CV</button>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/yasar-arafath-a416252bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/yasar_a_rafath?igsh=MWhvcG12anRhYmhpbw%3D%3D&utm_source=qr" target="_blank" aria-label="instagaram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/yasararafath22/Yasar_-9EB069B2521188FA5BE48D417405D857" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/share/CC2NuD5VGfVzDeGU/?mibextid=LQQJ4d" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+
+    <div class="about-content" id="about">
+        <h1>About Me</h1>
+        <p>
+            I am Yasar Arafath, a web developer with a passion for creating innovative and efficient web solutions. Currently pursuing a Bachelor of Computer Applications (BCA) at MIET College, I have honed my skills in various web technologies including HTML, CSS, JavaScript, and React.
+        </p>
+        <p>
+            My journey into web development began with a keen interest in technology and a desire to solve real-world problems. Over the years, I have developed a solid understanding of both front-end and back-end technologies. I am particularly interested in creating responsive and user-friendly interfaces.
+        </p>
+        <p>
+            In addition to my technical skills, I am a quick learner and a dedicated team player. I enjoy working on collaborative projects and am always eager to take on new challenges that push the boundaries of my knowledge and abilities.
+        </p>
+    </div>
+
+    <div class="resume-content" id="resume">
+        <h1>Resume</h1>
+
+        <div class="resume-section">
+            <embed img src="yasar.jpg" alt="Profile Photo" width=300px height=300px>
+            </div>
+            <h2>Skills</h2>
+            <div class="skill-box">
+                <div class="skill-title">HTML</div>
+                <div class="skill-level">
+                    <div class="skill-percentage" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">CSS</div>
+                <div class="skill-level">
+                    <div class="skill-percentage" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">JavaScript</div>
+                <div class="skill-level">
+                    <div class="skill-percentage" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">React</div>
+                <div class="skill-level">
+                    <div class="skill-percentage" style="width: 75%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-section resume-personal-info">
+            <h2>Personal Information</h2>
+            <h3>Contact Information</h3>
+            <ul>
+                <li>Email: <a href="mailto:yasartpi006@gmail.com">yasar@example.com</a></li>
+                <li>Phone: +91 9344491716</li>
+                <li>Address: 6/1082 malakapalli street thirupoondi 611110 nagai dist, India</li>
+            </ul>
+        </div>
+
+        <div class="resume-section resume-experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>Intern at AICTE - Assisted with front-end development and bug fixes.</li>
+                <li>Freelance Web Developer - Worked on various projects including e-commerce sites and personal blogs.</li>
+            </ul>
+        </div>
+
+        <div class="resume-section resume-education">
+            <h2>Education</h2>
+            <ul>
+                <li>Bachelor of Computer Applications (BCA) - MIET College, Expected 2025</li>
+                <li>High School - Adharsh matric hiegher secondary  School nagapattinam, Graduated 2021</li>
+            </ul>
+        </div>
+
+        <div class="resume-section resume-hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Coding</li>
+                <li>Gaming</li>
+                <li>Traveling</li>
+            </ul>
+        </div>
+
+        <div class="resume-section resume-passions">
+            <h2>Passions</h2>
+            <ul>
+                <li>Software Development</li>
+                <li>Technology Trends</li>
+                <li>Open Source Projects</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contact-page" id="contact">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>If you'd like to get in touch, please feel free to contact me through the following methods:</p>
+            <ul>
+                <li>Email: <a href="mailto:yasartpi006@gmail.com">yasarttpi006@gmail.com</a></li>
+                <li>Phone: +91 9344491716</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/yasar-arafath-a416252bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">linkedin.com/in/yasar</a></li>
+            </ul>
+        </div>
+        <div class="contact-form">
+            <h3>Contact Form</h3>
+            <form action="submit_form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Yasar Arafath. All Rights Reserved.</p>
+        <p>Created with <a href="https://github.com/yasararafath22/Yasar_-9EB069B2521188FA5BE48D417405D857" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+
+</html>
